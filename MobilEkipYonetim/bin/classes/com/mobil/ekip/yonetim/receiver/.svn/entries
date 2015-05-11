@@ -1,0 +1,40 @@
+8
+
+dir
+3
+https://mobilekipyonetim.googlecode.com/svn/trunk/MobilEkipYonetim/src/com/mobil/ekip/yonetim/receiver
+https://mobilekipyonetim.googlecode.com/svn
+
+
+
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+TaskCompletedReceiver.java
+file
+
+
+
+
+2014-09-28T19:21:19.361904Z
+4893ec56c665179e172299fe24df116b
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+GcmBroadcastReceiver.java
+file
+4
+
+
+
+2014-10-04T15:19:44.373904Z
+5eb24535e8a493aeaf15da3107d551cd
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+

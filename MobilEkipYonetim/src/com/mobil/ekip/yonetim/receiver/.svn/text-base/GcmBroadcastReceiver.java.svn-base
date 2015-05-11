@@ -1,0 +1,141 @@
+/*
+ * Copyright 2013 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.mobil.ekip.yonetim.receiver;
+
+import java.util.List;
+
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningAppProcessInfo;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.location.Location;
+import android.net.Uri;
+import android.sax.StartElementListener;
+import android.support.v4.app.NotificationCompat;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.mobil.ekip.yonetim.activity.DetailsActivity;
+import com.mobil.ekip.yonetim.activity.MainActivity;
+import com.mobil.ekip.yonetim.application.MyApplication;
+
+/**
+ * Handling of GCM messages.
+ */
+public class GcmBroadcastReceiver extends BroadcastReceiver {
+    static final String TAG = "GCMDemo";
+    public static final int NOTIFICATION_ID = 1;
+    private NotificationManager mNotificationManager;
+    NotificationCompat.Builder builder;
+    Context ctx;
+    @Override
+    public void onReceive(Context context, Intent intent) {
+    	try {
+			Log.i("mobilEkip", "GCM Mesaj Geldi");
+			GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(context);
+			ctx = context;
+			
+			String messageType = gcm.getMessageType(intent);
+			if (GoogleCloudMessaging.MESSAGE_TYPE_SEND_ERROR.equals(messageType)) {
+			    sendNotification("Send error: " + intent.getExtras().toString());
+			} else if (GoogleCloudMessaging.MESSAGE_TYPE_DELETED.equals(messageType)) {
+			    sendNotification("Deleted messages on server: " + intent.getExtras().toString());
+			} else {
+			    //sendNotification("Received: " + intent.getExtras().toString());
+			    //Intent newIntent = new Intent();
+				
+				
+				String message =(String)intent.getExtras().get("message");
+				String orderId =(String)intent.getExtras().get("orderId");
+				String immediately = (String)intent.getExtras().get("immediately");
+				
+				sendNotification("mesaj geldi="+ " "+ message+ " "+ orderId);
+				Log.i("mobilEkip", "GCM Mesaj = "+ message+ " "+ orderId);
+				
+				if("true".equals(immediately)){
+					String latValue = (String)intent.getExtras().get("lat");
+					String lngValue = (String)intent.getExtras().get("lng");
+					
+					Location dest = new Location("Destination2");
+			   	 	dest.setLatitude(Double.valueOf(latValue));
+			   	 	dest.setLongitude(Double.valueOf(lngValue));
+			   	 	MyApplication myApplication = (MyApplication)context.getApplicationContext() ;
+			   	 	myApplication.startTracking(orderId, dest);
+			   	 	
+			   	 	String uri ="route66://?daddr="+latValue+","+lngValue;
+			   	   Toast.makeText(context.getApplicationContext(),uri, Toast.LENGTH_LONG).show();
+			   	
+			   		Intent newIntent = new Intent(Intent.ACTION_VIEW);
+			   		newIntent.setData(Uri.parse(uri));
+			   		newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			   		context.startActivity(newIntent);
+				
+					
+				
+					
+				}else{
+				
+				
+				
+					Intent newIntent = new Intent(context,MainActivity.class);
+					  newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					  newIntent.putExtra("orderId", orderId);
+					  newIntent.putExtra("message", message);
+					  newIntent.putExtra("messageType", "GCM");
+					context.startActivity(newIntent);
+				
+				/*
+			    Intent newIntent = new Intent("android.intent.action.VIEW", Uri.parse("http://"+intent.getExtras().get("message")));
+			    //newIntent.setClass(context, AndroidMobilePushApp.class);
+			    newIntent.putExtras(intent.getExtras());
+			    newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			    context.startActivity(newIntent);
+			    */
+			}
+			setResultCode(Activity.RESULT_OK);
+   }
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Toast.makeText(context.getApplicationContext(),e.getMessage(), Toast.LENGTH_LONG).show();	
+		}
+    }
+    // Put the GCM message into a notification and post it.
+    private void sendNotification(String msg) {
+        mNotificationManager = (NotificationManager)
+                ctx.getSystemService(Context.NOTIFICATION_SERVICE);
+
+        PendingIntent contentIntent = PendingIntent.getActivity(ctx, 0,
+                new Intent(ctx, DetailsActivity.class), 0);
+
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(ctx)
+        //.setSmallIcon(R.drawable.ic_stat_gcm)
+        .setContentTitle("GCM Notification")
+        .setStyle(new NotificationCompat.BigTextStyle()
+        .bigText(msg))
+        .setContentText(msg);
+
+        mBuilder.setContentIntent(contentIntent);
+        mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
+    }
+}

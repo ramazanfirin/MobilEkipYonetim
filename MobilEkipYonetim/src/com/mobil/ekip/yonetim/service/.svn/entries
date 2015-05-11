@@ -1,0 +1,64 @@
+8
+
+dir
+3
+https://mobilekipyonetim.googlecode.com/svn/trunk/MobilEkipYonetim/src/com/mobil/ekip/yonetim/service
+https://mobilekipyonetim.googlecode.com/svn
+
+
+
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+SendLocationTask.java
+file
+4
+
+
+
+2014-10-07T07:35:46.306476Z
+c1027be22d89c6f300e0b042f0215838
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+
+GetOrderListTask.java
+file
+4
+
+
+
+2014-10-04T10:33:48.088452Z
+5a8d439539e5d60cc03b80bb86c9026b
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+
+GCMRegisterCheckTask.java
+file
+
+
+
+
+2014-09-29T04:32:34.206343Z
+d5778881550173c193d86ee53084cfd0
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+GCMRegisterTask.java
+file
+
+
+
+
+2014-09-29T11:02:57.700615Z
+9e9a374533b232bc883271638df9d09f
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+

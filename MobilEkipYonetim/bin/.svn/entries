@@ -1,0 +1,100 @@
+8
+
+dir
+3
+https://mobilekipyonetim.googlecode.com/svn/trunk/MobilEkipYonetim/bin
+https://mobilekipyonetim.googlecode.com/svn
+
+
+
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+R.txt
+file
+4
+
+
+
+2014-11-12T14:58:03.283820Z
+175d5d91db789a178960036e366a88cb
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+
+dexedLibs
+dir
+
+AndroidManifest.xml
+file
+4
+
+
+
+2014-10-10T11:16:59.269455Z
+4424e766a8b2a26c2dfadb126ffa7737
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+
+resources.ap_
+file
+4
+
+
+
+2014-10-06T07:34:27.156606Z
+7d6fdbe799b2b8fc8890a1d85f6bdea3
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+has-props
+
+res
+dir
+
+jarlist.cache
+file
+
+
+
+
+2014-09-29T11:38:43.159483Z
+1c23420d6d20fadbbaa04bc9cae2eeb0
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+MobilEkipYonetim.apk
+file
+4
+
+
+
+2014-10-06T07:34:29.287078Z
+dce6d84618ccd45012c775fdf0064188
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+has-props
+
+classes.dex
+file
+4
+
+
+
+2014-10-06T07:34:28.472536Z
+1c117aee1d4eb2c48f537c5ff5333bc2
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+has-props
+
+classes
+dir
+

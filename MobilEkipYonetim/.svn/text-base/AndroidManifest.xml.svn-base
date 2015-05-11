@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobil.ekip.yonetim"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.google.android.gcm.demo.app.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    
+    <permission
+        android:name="com.mobil.ekip.yonetim.receiver" />
+    
+
+    <uses-permission android:name="com.google.android.gcm.demo.app.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="akilliyazilim.android.broadcastreceiver" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.mobil.ekip.yonetim.receiver" />
+
+    <permission android:name="akilliyazilim.android.broadcastreceiver" />
+
+    <application
+        android:name="com.mobil.ekip.yonetim.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.mobil.ekip.yonetim.activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mobil.ekip.yonetim.activity.DetailsActivity"
+            android:label="Details" >
+        </activity>
+
+        <receiver android:name="com.mobil.ekip.yonetim.receiver.TaskCompletedReceiver" >
+            <intent-filter>
+                <action android:name="com.mobil.ekip.yonetim.receiver.TaskCompletedReceiver" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.mobil.ekip.yonetim.receiver.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.mobil.ekip.yonetim.receiver" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.mobil.ekip.yonetim.MainActivity22"
+            android:label="@string/title_activity_main_activity22" >
+        </activity>
+    </application>
+
+</manifest>

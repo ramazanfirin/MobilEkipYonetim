@@ -1,0 +1,122 @@
+8
+
+dir
+2
+https://mobilekipyonetim.googlecode.com/svn/trunk/MobilEkipYonetim
+https://mobilekipyonetim.googlecode.com/svn
+
+
+
+2014-09-29T11:40:12.175939Z
+2
+ramazanfirin@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9fd573bd-5c43-db0f-524f-40c7cb94c861
+
+.classpath
+file
+3
+
+
+
+2014-09-27T22:55:15.689997Z
+bad3b18e39a573ca266102bc62eab732
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+project.properties
+file
+3
+
+
+
+2014-09-27T22:50:21.764817Z
+62407791317a82f15ed6d141cf022f06
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+assets
+dir
+
+.project
+file
+3
+
+
+
+2014-09-27T22:50:18.651029Z
+67f00c45dca64c71784a65f29738056a
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+proguard-project.txt
+file
+3
+
+
+
+2014-09-27T22:50:18.668623Z
+18bfe77c342b4698f1cef19cf8d918e2
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+AndroidManifest.xml
+file
+4
+
+
+
+2014-10-02T13:14:40.510639Z
+4424e766a8b2a26c2dfadb126ffa7737
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+
+src
+dir
+
+bin
+dir
+
+gen
+dir
+
+libs
+dir
+
+res
+dir
+
+ic_launcher-web.png
+file
+3
+
+
+
+2014-09-27T22:50:19.494844Z
+03162f4ee138bcbae36f78b1d25dbd5b
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+has-props
+
+.settings
+dir
+

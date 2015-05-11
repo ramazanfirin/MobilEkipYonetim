@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/3/trunk/MobilEkipYonetim/src/com/mobil/ekip/yonetim/receiver
+END
+TaskCompletedReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/3/trunk/MobilEkipYonetim/src/com/mobil/ekip/yonetim/receiver/TaskCompletedReceiver.java
+END
+GcmBroadcastReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/4/trunk/MobilEkipYonetim/src/com/mobil/ekip/yonetim/receiver/GcmBroadcastReceiver.java
+END

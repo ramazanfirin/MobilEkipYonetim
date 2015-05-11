@@ -1,0 +1,52 @@
+8
+
+dir
+3
+https://mobilekipyonetim.googlecode.com/svn/trunk/MobilEkipYonetim/src/com/mobil/ekip/yonetim/activity
+https://mobilekipyonetim.googlecode.com/svn
+
+
+
+2014-09-29T11:43:33.656258Z
+3
+ramazanfirin@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+MainActivity.java
+file
+4
+
+
+
+2014-10-02T13:08:41.151727Z
+7f4f46c7e911c20b54fe8f6bcc0944d3
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+
+DetailsActivity.java
+file
+4
+
+
+
+2014-10-06T07:34:20.925339Z
+023d4a2023d623a2f92f38f3510696d4
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+
+BaseActivity.java
+file
+4
+
+
+
+2014-10-06T07:31:53.977400Z
+d0e18856c1d4b5b12aa3a4c7fcd99adf
+2014-11-12T14:58:22.981703Z
+4
+ramazanfirin@gmail.com
+
